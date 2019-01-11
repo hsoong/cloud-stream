@@ -5,6 +5,7 @@
   <packaging>pom</packaging>
   <modules>
     <module>sample-producer</module>
+    <module>sample-consumer</module>
   </modules>
   <parent>
     <artifactId>spring-boot-starter-parent</artifactId>
