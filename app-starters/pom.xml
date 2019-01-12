@@ -6,6 +6,7 @@
   <modules>
     <module>sample-producer</module>
     <module>sample-consumer</module>
+    <module>stream-eda</module>
   </modules>
   <parent>
     <artifactId>spring-boot-starter-parent</artifactId>

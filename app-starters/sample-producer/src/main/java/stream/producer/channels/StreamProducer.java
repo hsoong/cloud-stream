@@ -33,11 +33,13 @@ public class StreamProducer {
         @RequestMapping(value = "/hi/{name}")
         ResponseEntity<String> hi(@PathVariable String name) {
             String message = "Hello, " + name + " !";
+
             this.direct.send(MessageBuilder.withPayload("Direct: " + message).build());
             this.broadcast.send(MessageBuilder.withPayload("Broadcast: " + message).build());
+
             return ResponseEntity.ok(message);
         }
-        
+
     }
 
 

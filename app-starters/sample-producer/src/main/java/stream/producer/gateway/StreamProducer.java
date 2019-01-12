@@ -46,8 +46,10 @@ public class StreamProducer {
         @RequestMapping(method = RequestMethod.GET, value = "/hi/{name}")
         ResponseEntity<?> hi(@PathVariable String name) {
             String message = "Hello, " + name + " !";
+
             this.gateway.directGreet("Direct: " + message);
             this.gateway.broadcastGreet("Broadcast: " + message);
+
             return ResponseEntity.ok(message);
         }
     }

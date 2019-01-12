@@ -23,7 +23,7 @@ public class StreamConsumer {
         Log log = LogFactory.getLog(getClass());
 
         return IntegrationFlows.from(incoming)
-                .transform(prefix.toUpperCase())
+                .transform(String.class, String::toUpperCase)
                 .handle(String.class, (greeting, headers) -> {
             log.info("greeting received in integrationflow(" + prefix + "): " + greeting);
             return null;
